@@ -19,7 +19,10 @@ fn main() {
 
         let guess = match guess.trim().parse::<u32>(){
             Ok(num) => num,
-            Err(_) => continue,
+            Err(_) => {
+                println!("Invalid guess, try again!");
+                continue;
+            }
         };
                 
         println!("You guessed: {}", guess);
